@@ -18,7 +18,9 @@ const SendInput = () => {
           withCredentials:true
         })
         
-        dispatch(setMessage([...message,res?.data?.newMessage]))
+        res.then(response => {
+          dispatch(setMessage([...message, response?.data?.newMessage]));
+        });
        
       }
       catch(err){

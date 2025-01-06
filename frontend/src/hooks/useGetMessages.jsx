@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import store from "../redux/store";
+
 import { useSelector, useDispatch } from "react-redux";
 import axios from "axios";
 import { setSelectedUser } from "../redux/userSlice";

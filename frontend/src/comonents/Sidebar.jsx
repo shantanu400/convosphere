@@ -5,14 +5,14 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import toast from "react-hot-toast";
 import { useDispatch, useSelector } from "react-redux";
-import { setSearchedUser } from "../redux/userSlice";
+import { setAuthUser, setSearchedUser } from "../redux/userSlice";
 
 
 const  Sidebar=()=>{
     const navigate=useNavigate()
     const dispatch=useDispatch()
     const {otherUsers,searchedUser}=useSelector(store=>store.user);
-    console.log(otherUsers,searchedUser,"in line 15 sidebar")
+   
 
     const [searchingUser,setSearchingUser]=useState("");
     const searchHandler = (e) => {
@@ -33,9 +33,11 @@ const logoutHandle=async ()=>{
     
     try{
         const res=await axios.get('http://localhost:8000/api/v1/user/logout')
+        
         toast.success(res.data.message)
         navigate('/login')
-        console.log('res in logout click',res)
+        dispatch(setAuthUser(null));
+        
 
     }
     catch(err){

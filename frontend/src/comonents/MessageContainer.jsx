@@ -5,14 +5,15 @@ import { useSelector } from 'react-redux'
 
 
 const MessageContainer = () => {
-    const {selectedUser}=useSelector(store=>store.user)
+    const {selectedUser,onlineUser}=useSelector(store=>store.user)
     const authUser=useSelector(store=>store.user.authUser)
+    const isOnline = onlineUser && onlineUser.includes(selectedUser?._id);
   return (
     <>
       {selectedUser !== null ? (
     <div className='md:min-w-[550px] flex flex-col'>
     <div className=' flex gap-2 items-center rounded-lg bg-zinc-800 px-4 py-2 mb-2 text-white'>
-        <div className='avatar online'> 
+        <div className={`avatar ${isOnline? 'online':''}`}> 
             <div className='w-12 rounded-full'>
                 <img src={selectedUser?.profilephoto}></img>
             </div>

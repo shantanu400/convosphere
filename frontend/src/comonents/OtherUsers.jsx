@@ -10,8 +10,12 @@ const OtherUsers = () => {
   if(!otherUsers && !searchedUser){
     return
   }
+
+  
   return (
     <div className='overflow-auto flex-1'>
+      
+
       { searchedUser && searchedUser !=""  && searchedUser!=[] ? 
       
           <OtherUser key={searchedUser[0]._id} user={searchedUser[0]}/>

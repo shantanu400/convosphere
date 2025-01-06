@@ -1,7 +1,8 @@
 const mongoose = require("mongoose");
 const Users = require("../models/userModel");
 const bcrypt = require("bcrypt");
-const jwt=require('jsonwebtoken')
+const jwt=require('jsonwebtoken');
+const { generate } = require("../gemini/gemini");
 const register = async (req, res) => {
   try {
     const { username, password, confirmpassword, fullname, gender } = req.body;
@@ -41,6 +42,7 @@ const register = async (req, res) => {
 
 const login=async (req,res)=>{
   try{
+   // generate();
     const {username,password}=req.body;
     //console.log(" line 45 login",username, password)
   if(!username|| !password){

@@ -14,7 +14,7 @@ const OtherUser = (prop) => {
 
   return (
     <div>
-        <div onClick={()=>selectedUserHandle(user)} className={`${selectedUser?._id===user?._id?'bg-zinc-200':''} flex gap-2 items-center text-white hover:text-zinc-800 hover:bg-zinc-200 rounded p-2 cursor-pointer`}>
+        <div onClick={()=>selectedUserHandle(user)} className={`${selectedUser?._id===user?._id?'bg-white':''} flex gap-2 items-center text-black hover:text-zinc-800 hover:bg-zinc-200 rounded p-2 cursor-pointer`}>
             
             
             <div className={`avatar ${isOnline? 'online':''}`}>

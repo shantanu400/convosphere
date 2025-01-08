@@ -185,7 +185,7 @@ const SignUp = () => {
                       placeholder="fulllname"
                     />
                     <input
-                      className="w-full px-8  py-2 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white "
+                      className="w-full -mt-80 px-8  py-2 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white "
                       value={user.username}
                       onChange={(e) => {
                         setUser({ ...user, username: e.target.value });
@@ -195,7 +195,7 @@ const SignUp = () => {
                       placeholder="username"
                     />
                     <input
-                      className="w-full px-8 py-2 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5"
+                      className="w-full mt-1.5 px-8 py-2 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5"
                       value={user.password}
                       onChange={(e) => {
                         setUser({ ...user, password: e.target.value });
@@ -205,7 +205,7 @@ const SignUp = () => {
                       placeholder="Password"
                     />
                     <input
-                      className="w-full px-8 py-2 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5"
+                      className="w-full mt-1.5 px-8 py-2 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5"
                       value={user.confirmpassword}
                       onChange={(e) => {
                         setUser({ ...user, confirmpassword: e.target.value });
@@ -239,7 +239,7 @@ const SignUp = () => {
 
                     <button
                       type="submit"
-                      className="mt-5 tracking-wide font-semibold bg-green-400 text-white-500 w-full py-4 rounded-lg hover:bg-green-700 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none"
+                      className="mt-1 tracking-wide font-semibold bg-green-400 text-white-500 w-full py-4 rounded-lg hover:bg-green-700 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none"
                     >
                       <svg
                         className="w-6 h-6 -ml-2"
@@ -258,12 +258,12 @@ const SignUp = () => {
                     
                   </form>
                   <div className="flex items-center">
-                    <p className="text-center my-1">
+                    <p className="text-center my-1 mt-0">
                       Don't have an account?
                       <Link to="/Login">Login</Link>
                     </p>
                   </div>
-                  <p className="mt-6 text-xs text-gray-600 text-center">
+                  <p className="mt-0 text-xs text-gray-600 text-center">
                     I agree to abide by ConvoSphere
                     <a
                       href="#"

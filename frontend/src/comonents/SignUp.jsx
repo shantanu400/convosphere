@@ -23,7 +23,7 @@ const SignUp = () => {
     e.preventDefault();
     try {
       const res = await axios.post(
-        "http://localhost:8000/api/v1/user/register",
+        "https://convosphere-t923.onrender.com/api/v1/user/register",
         user,
         {
           header: {

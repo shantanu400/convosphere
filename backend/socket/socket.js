@@ -5,7 +5,7 @@ const userSocketMap = {};
 const startServer = (server) => {
   io = socketIo(server, {
     cors: {
-      origin: "http://localhost:3000",
+      origin: "https://convosphere-gold.vercel.app",
       methods: ["GET", "POST"],
     },
   });

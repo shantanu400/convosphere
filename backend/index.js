@@ -94,7 +94,8 @@ app.use(express.json());
 app.use(cookieParser())
 
 const corsOptions={
-    origin:'http://localhost:3000',
+    // origin:'http://localhost:3000',
+    origin:'https://convosphere-t923.onrender.com',
     credentials:true
 }
 const server=http.createServer(app);

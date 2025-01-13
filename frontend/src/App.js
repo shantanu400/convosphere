@@ -25,7 +25,7 @@ function App() {
 
   useEffect(()=>{
     if(authUser){
-    const socketio=io('http://localhost:8000',{
+    const socketio=io('https://convosphere-t923.onrender.com',{
       query:{
         userId:authUser._id,
       }

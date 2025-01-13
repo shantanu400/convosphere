@@ -32,7 +32,7 @@ const logoutHandle=async ()=>{
 
     
     try{
-        const res=await axios.get('https://humanbot-connect-app.onrender.com/api/v1/user/logout')
+        const res=await axios.get('https://convosphere-t923.onrender.com/api/v1/user/logout')
         
         toast.success(res.data.message)
         navigate('/login')

@@ -95,7 +95,7 @@ app.use(cookieParser())
 
 const corsOptions={
     // origin:'http://localhost:3000',
-    origin:'https://convosphere-t923.onrender.com',
+    origin:'https://convosphere-gold.vercel.app',
     credentials:true
 }
 const server=http.createServer(app);

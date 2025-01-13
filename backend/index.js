@@ -99,6 +99,8 @@ const corsOptions={
 }
 const server=http.createServer(app);
 startServer(server);
+console.log("now commit")
+
 
 app.use(cors(corsOptions))
 app.use("/api/v1/user",userRouter);

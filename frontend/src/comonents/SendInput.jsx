@@ -14,7 +14,7 @@ const SendInput = () => {
     const handleSubmit=async (e)=>{
       e.preventDefault();
       try{
-        const res=await axios.post(`http://localhost:8000/api/v1/message/send/${selectedUser?._id}`,{messagenew},{
+        const res=await axios.post(`https://convosphere-t923.onrender.com/api/v1/message/send/${selectedUser?._id}`,{messagenew},{
           headers:{
             'Content-type':'application/json'
           },
